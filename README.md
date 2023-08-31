@@ -1,13 +1,13 @@
-#proje# Portfolio
+# Portfolio
 
 Welcome to the **Portfolio** repository! This portfolio showcases the work and services offered by the creator.
 
 <a href="https://vercel.com/arunsh52/portfolio" target="
-_blank"><i class="fa fa-eye" aria-hidden="true"> Live</i></a>
+_blank"> <h1>Live</h1></a>
 
 ## Table of Contents
 
-- [About]
+- [About](#about)
 - [Services]
 - [Projects]
 - [Contact]
