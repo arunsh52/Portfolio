@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/Favicon.png" />
+    <title>Query</title>
+    <link rel="stylesheet" href="formstyle.css">
+    <script
+      src="https://kit.fontawesome.com/836a943e18.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+   
+     <div class="container">
+        <div class="logo">
+             <a href="index.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/images1.jpg" alt="logo">
+            </a>
+            <h1>Queries</h1>
+        </div>
+        <form autocomplete="off" method="post" name="google-sheet" id="myForm">
+
+            <label for="name">Name <span>*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+            <label for="email">Email <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+            
+            <label for="number">Number</label>
+            <input type="number" name="number" id="number" placeholder="0000000000"  min="10" >
+            
+            <label for="country">Country <span>*</span></label>
+            <select id="country" name="country">
+            <option value="select">--Select--</option>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+            <option value="China">Australia</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Germany">Germany</option>
+            <option value="Italy">Italy</option>
+            <option value="India">India</option>
+            <option value="Japan">Japan</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            </select>
+
+            <label for="subject">Query <span>*</span></label>
+            <textarea id="subject" name="query" placeholder="Write something.." style="height:200px" required></textarea>
+            
+            <button type="submit" name="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+
+            
+
+        </form>
+    </div> 
+    <div class="footer-coded-by">
+        <p>
+        <i class="fas fa-code"></i> with ❤️ by Arun Sharma &copy; 2023
+        </p>
+        <p>Built with pure HTML, CSS and JavaScript</p>
+    </div>
+
+    <script>
+    const scriptURL= 'https://script.google.com/macros/s/AKfycbzbfDeSGBLiFldoDlRjmg7Ey1G_pwbEI11PkyaS_qSsMU42XGNn9aux3rUH7cQt5yUg/exec'
+    const form = document.forms['google-sheet']
+
+    form.addEventListener('submit', e=>{
+            e.preventDefault()
+            fetch(scriptURL, {method: 'POST', body:new FormData(form)})
+                .then(response => alert("Your Response is Submited! we will contact you soon.. \nThankYou..."))
+                .catch(error => console.error('Error!', error.message))
+            document.getElementById("myForm").reset();
+    })
+    
+</script>
+</body>
+
+</html>
