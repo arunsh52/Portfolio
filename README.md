@@ -2,7 +2,7 @@
 
 Welcome to the **Portfolio** repository! This portfolio showcases the work and services offered by the creator.
 
-Watch <a href="https://arun52portfolio.vercel.app/" target="
+Watch <a href="https://arunsh52.github.io/Portfolio/" target="
 _blank">Live</a>
 
 ## Table of Contents
