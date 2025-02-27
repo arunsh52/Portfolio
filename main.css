@@ -73,6 +73,36 @@ nav {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   background-image: none;
 }
+/* -------------------------- */
+h3 {
+  font-size: 1.5rem; /* Adjust this value as needed */
+}
+
+/* Skill section - Increase font size and change color */
+.about ul li {
+  font-size: 1.2rem; /* Adjust font size for skills */
+  /* color: rgb(3, 155, 155); /* Change skill font color */
+}
+
+/* Bold text in About section */
+.about b {
+  color: rgb(3, 155, 155); /* Change the color of bold text */
+}
+
+.tech {
+  color: rgb(3, 155, 155); /* Change color to rgb(3, 155, 155) */
+}
+/* ----------------------------- */
+
+ul {
+  padding-left: 20px; /* Adds space to the left of the list */
+}
+
+li {
+  list-style-type: disc;
+  color: white;
+  margin-bottom: 5px;  
+}
 
 .line1 {
   width: 15px;
@@ -355,9 +385,9 @@ hr {
   height: 1px;
 }
 
-/* Services */
+/* experience */
 
-.services {
+.experience {
   padding: 3rem 0;
   min-height: 100vh;
   max-width: 90rem;
@@ -379,13 +409,26 @@ hr {
   margin-bottom: 5rem;
 }
 
-.service-tiers {
+.experience b {
+  color: rgb(3, 155, 155); /* Change the color of bold text */
+}
+
+/* .experience-tiers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2.5rem;
+} */
+
+
+/* arunsh52 */
+.experience-tiers {
+  display: flex; /* Change from grid to flex */
+  gap: 2.5rem;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: space-between; /* Space out items */
 }
 
-.tier-item {
+/* .tier-item {
   height: 30rem;
   padding: 3rem;
   position: relative;
@@ -393,6 +436,29 @@ hr {
   flex-direction: column;
   justify-content: center;
   cursor: default;
+} */
+
+/* arunsh52 */
+.tier-item {
+  width: 30%; /* Adjust to take up 30% of the width */
+  min-width: 25rem; /* Minimum width for each tier item */
+  padding: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: default;
+  box-sizing: border-box; /* Ensure padding doesn't affect size */
+  text-align: center; /* Center text for better alignment */
+}
+
+
+.tier-item img{
+  height: 15rem;
+  width: auto;
+  border-radius: 50%;
+  margin: 2rem;
+  box-shadow: 0 20px 30px 0 rgba(0, 255, 255, 0.15);
 }
 
 .tier-item i {
@@ -545,6 +611,60 @@ footer a {
 
 /* Responsive Design */
 
+
+
+@media (max-width: 750px) {
+  .main-message h3 {
+    font-size: 3rem; /* Adjust the font size of main heading on mobile */
+  }
+
+  .about .container {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  p {
+    font-size: 1.3rem; /* Adjust paragraph font size */
+  }
+
+  .title-heading {
+    margin: 0; /* Remove margin for better spacing */
+  }
+
+  /* Experience Section Responsiveness */
+  .experience-tiers {
+    flex-direction: column; /* Stack experience items vertically */
+    gap: 2rem; /* Increase gap between items */
+  }
+
+  .tier-item {
+    width: 100%; /* Make each item take up full width on mobile */
+    padding: 2rem; /* Adjust padding for mobile */
+    text-align: center; /* Center the text for better alignment */
+  }
+
+  .tier-item img {
+    max-width: 120px; /* Reduce image size for mobile */
+    width: auto; /* Maintain aspect ratio */
+    height: auto;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .tier-item h2 {
+    font-size: 1.8rem; /* Smaller heading size on mobile */
+  }
+
+  .tier-item p {
+    font-size: 1.2rem; /* Slightly smaller paragraph text */
+  }
+
+  /* Optional: Add more styling adjustments based on needs */
+  .tier-item i {
+    font-size: 3rem; /* Adjust icon size for mobile */
+  }
+}
+
+
+
 @media (max-width: 750px) {
   .main-message h3 {
     font-size: 3rem;
@@ -558,10 +678,6 @@ footer a {
   .title-heading {
     margin: 0;
   }
-
-  .services-tiers {
-    gap: 0;
-  }
   .project-item {
     flex-direction: column;
     align-items: flex-start;
@@ -572,6 +688,8 @@ footer a {
     width: 20rem;
   }
 }
+
+
 
 @media (max-width: 665px) {
   .main-message {
