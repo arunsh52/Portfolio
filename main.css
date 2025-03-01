@@ -508,7 +508,7 @@ hr {
   margin: 0 3rem 0 0;
 }
 
-.project-item, .education-item {
+.project-item, .education-item{
   display: flex;
   align-items: center;
   justify-content: center;
