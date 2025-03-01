@@ -484,7 +484,7 @@ hr {
 
 /* Projects */
 
-.projects {
+.projects{
   padding: 3rem 0;
   min-height: 100vh;
   max-width: 70rem;
@@ -508,7 +508,7 @@ hr {
   margin: 0 3rem 0 0;
 }
 
-.project-item {
+.project-item, .education-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -519,12 +519,12 @@ hr {
   flex: 1;
 }
 
-.project-description {
+.project-description{
   flex: 1;
   
 }
 
-.project-description h2 {
+.project-description h2{
   font-size: 2rem;
   margin: 2rem 0;
   background: linear-gradient(
@@ -536,6 +536,17 @@ hr {
   -webkit-text-fill-color: transparent;
 }
 
+.education-description b{
+  color:#39c1c1;
+}
+.education-item img{
+  height: 15rem;
+  width: auto;
+  border-radius: 50%;
+  margin: 2rem;
+  /* box-shadow: 0 20px 30px 0 rgba(0, 255, 255, 0.15); */
+}
+
 .project-description p {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
@@ -545,11 +556,71 @@ hr {
   padding: 0;
 }
 
-.project-link {
+
+
+/* Education */
+
+/* Style for the Education Section Image */
+
+.education {
+  padding: 3rem 0;
+  min-height: 100vh;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.domain {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem 0;
+  background: linear-gradient(
+    to right,
+    rgba(249, 105, 14, 1) 0%,
+    rgba(102, 51, 153, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Optional: Adjusting the layout of the education section */
+.education-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.45rem 5rem 1.45rem;
+
+}
+
+.education-description {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.education-description h2 {
+  font-size: 2rem;
+  margin: 2rem 0;
+  background: linear-gradient(
+    to right,
+    rgba(249, 105, 14, 1) 0%,
+    rgba(102, 51, 153, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.education-item hr {
+  margin-top: 20px;
+}
+
+.education-link {
   display: inline-block;
   margin: 2rem 0;
   font-size: 1.4rem;
 }
+
 
 /* Contact */
 
@@ -609,6 +680,14 @@ footer a {
   font-size: 2rem;
 }
 
+.education-img{
+  height: 15rem;
+  width: auto;
+  border-radius: 50%;
+  margin: 2rem;
+  /* box-shadow: 0 20px 30px 0 rgba(0, 255, 255, 0.15); */
+}
+
 /* Responsive Design */
 
 
@@ -648,12 +727,19 @@ footer a {
     height: auto;
     margin: 0 auto; /* Center the image horizontally */
   }
+  
+  .tier-item {
+    flex-direction: column;
+    /* align-items: flex-start; */
+    padding: 2rem;
+    box-shadow: 0 20px 30px 0 rgba(212, 255, 255, 0.15);
+  }
 
   .tier-item h2 {
     font-size: 1.8rem; /* Smaller heading size on mobile */
   }
 
-  .tier-item p {
+  .tier-item p{
     font-size: 1.2rem; /* Slightly smaller paragraph text */
   }
 
@@ -661,7 +747,10 @@ footer a {
   .tier-item i {
     font-size: 3rem; /* Adjust icon size for mobile */
   }
+  
 }
+
+
 
 
 
@@ -734,5 +823,89 @@ footer a {
   footer,
   footer p {
     font-size: 1.2rem;
+  }
+}
+
+
+/* ------------------- */
+
+
+/* ------------------ */
+
+
+
+/* Style for the Upward Arrow */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #39c1c1; /* Customize the background color */
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  opacity: 0; /* Initially hide the arrow */
+  pointer-events: none; /* Disable interaction when hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in/fade-out */
+}
+
+.scroll-to-top.show {
+  opacity: 1; /* Show the arrow when scrolling down */
+  pointer-events: auto; /* Enable interaction */
+}
+
+.scroll-to-top:hover {
+  background-color: #1a8181; /* Change the background color when hovered */
+}
+
+.scroll-to-top i {
+  font-size: 26px; /* Icon size */
+}
+
+/* Optional: Adjust the icon size and add a smooth transition */
+.scroll-to-top:focus {
+  outline: none;
+}
+
+
+
+@media(max-width:750px) {
+  .main-message h3 {
+    font-size: 3rem; /* Adjust the font size of main heading on mobile */
+  }
+  
+
+  .education {
+    flex-direction: column; /* Stack experience items vertically */
+    gap: 2rem; /* Increase gap between items */
+  }
+  .education-item {
+    width: 90%; /* Make each item take up full width on mobile */
+    padding: 1rem; /* Adjust padding for mobile */
+    text-align: center; /* Center the text for better alignment */
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 20px 30px 0 rgba(212, 255, 255, 0.15);
+  }
+  
+  .education-item img{
+    max-width: 120px; /* Reduce image size for mobile */
+    width: auto; /* Maintain aspect ratio */
+    height: auto;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .education-tier{
+    flex-direction: column; /* Stack experience items vertically */
+    gap: 2rem;
+  }
+
+  .education-item h2 {
+    font-size: 1.8rem; /* Smaller heading size on mobile */
   }
 }
